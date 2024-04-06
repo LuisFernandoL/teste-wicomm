@@ -49,6 +49,7 @@ export const SectionAbout = styled.section`
     img {
       display: flex;
       width: 50%;
+      box-shadow: 20px 20px 5px -1px #F5F5F5;
     }
   }
 `;
