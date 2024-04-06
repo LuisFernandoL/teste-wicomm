@@ -96,6 +96,7 @@ export const SectionFavoritesOfTheWeek = styled.section`
           justify-content: space-around;
           gap: 2rem;
 
+
           h6 {
             cursor: pointer;
             width: 2.8rem;
@@ -108,6 +109,7 @@ export const SectionFavoritesOfTheWeek = styled.section`
             font-weight: 400;
             color: #4f4f4f;
             background-color: #ffffff;
+            object-fit: cover;
           }
         }
       }

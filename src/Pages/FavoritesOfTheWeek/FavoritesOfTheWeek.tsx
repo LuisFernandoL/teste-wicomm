@@ -7,8 +7,10 @@ import { SectionFavoritesOfTheWeek } from "./style"
 import { IoHeartOutline } from "react-icons/io5";
 
 
+
 export const FavoritesOfTheWeek = () => {
     const [addToCar, setAddToCar] = useState(false)
+
 
     const handleClick = () => {
         setAddToCar((open) => !open)
@@ -60,9 +62,7 @@ export const FavoritesOfTheWeek = () => {
                         <img src={sandal} alt="Imagem de um par de Sandália Soft Metalizado - Preta" />
                         <h4>36% OFF</h4>
                         <button className="btnHeart"><IoHeartOutline size={22} /></button>
-                        {/* {addToCar && (
-                            <button className="btnToCar">Adionar a sacola</button>)
-                        } */}
+
                     </div>
                     <h3>Sandália Soft Metalizado - Preta</h3>
                     <p>
@@ -77,9 +77,7 @@ export const FavoritesOfTheWeek = () => {
                         <img src={sneaker} alt="Imagem de um par de Sapatilha Elegance - Rose" />
                         <h4>36% OFF</h4>
                         <button className="btnHeart"><IoHeartOutline size={22} /></button>
-                        {/* {addToCar && (
-                            <button className="btnToCar">Adionar a sacola</button>)
-                        } */}
+
                     </div>
 
                     <h3>Sapatilha Elegance - Rose</h3>
@@ -94,9 +92,7 @@ export const FavoritesOfTheWeek = () => {
                         <img src={platform} alt="Imagem de um par de Plataforma em Nobuck - Whisky" />
                         <h4>36% OFF</h4>
                         <button className="btnHeart"><IoHeartOutline size={22} /></button>
-                        {/* {addToCar && (
-                            <button className="btnToCar">Adionar a sacola</button>)
-                        } */}
+
                     </div>
 
                     <h3>Plataforma em Nobuck - Whisky</h3>

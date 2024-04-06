@@ -12,7 +12,7 @@ export const SectionHomeinitial = styled.section`
       display: flex;
       flex-direction: column;
       position: absolute;
-      margin-top: -70rem;
+      margin-top: -42%;
       width: 100%;
       align-items: center;
 
@@ -20,11 +20,11 @@ export const SectionHomeinitial = styled.section`
         width: 25%;
       }
 
-      button{
+      button {
         width: 15.6rem;
         height: 4.8rem;
-        background-color: #CF215B;
-        color: #FFFFFF;
+        background-color: #cf215b;
+        color: #ffffff;
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 2rem;
@@ -53,13 +53,13 @@ export const SectionHomeinitial = styled.section`
           font-size: 1.4rem;
           font-weight: 400;
           line-height: 3.2rem;
-          color: #2C0713;
+          color: #2c0713;
           span {
             padding-left: 0.5rem;
             font-size: 2.4rem;
             font-weight: 300.2rem;
             line-height: 3.2rem;
-            color: #CF215B;
+            color: #cf215b;
           }
         }
       }
