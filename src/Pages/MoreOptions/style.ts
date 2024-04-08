@@ -21,7 +21,7 @@ export const SectioMoreOptions = styled.section`
         width: 100%;
       }
     }
-    
+
     img {
       cursor: pointer;
     }
@@ -48,7 +48,7 @@ export const SectioMoreOptions = styled.section`
           font-size: 1.6rem;
           font-weight: 400;
           line-height: 2.2rem;
-          color: #CF215B;
+          color: #cf215b;
           span {
             text-decoration: line-through;
             color: rgba(79, 79, 79, 1);
@@ -115,7 +115,7 @@ export const SectioMoreOptions = styled.section`
             justify-content: space-around;
             gap: 2rem;
 
-            h6 {
+            .btnSizeNumber {
               cursor: pointer;
               width: 2.8rem;
               height: 2.8rem;
@@ -127,6 +127,12 @@ export const SectioMoreOptions = styled.section`
               font-weight: 400;
               color: #4f4f4f;
               background-color: #ffffff;
+              object-fit: cover;
+            }
+
+            .clicked {
+              background-color: #cf215b;
+              color: #ffffff;
             }
           }
         }
