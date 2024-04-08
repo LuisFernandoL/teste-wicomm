@@ -48,9 +48,10 @@ export const SectioMoreOptions = styled.section`
           font-size: 1.6rem;
           font-weight: 400;
           line-height: 2.2rem;
-          color: rgba(79, 79, 79, 1);
+          color: #CF215B;
           span {
             text-decoration: line-through;
+            color: rgba(79, 79, 79, 1);
           }
         }
       }

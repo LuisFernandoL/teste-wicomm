@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import tennis from "../../assets/image 5.png"
 import sandal from "../../assets/image 6.png"
 import sneaker from "../../assets/image 7.png"
@@ -10,11 +10,29 @@ import { IoHeartOutline } from "react-icons/io5";
 
 export const FavoritesOfTheWeek = () => {
     const [addToCar, setAddToCar] = useState(false)
+    const [clickBtn, setClickBtn] = useState("");
+    const containerRef = useRef<HTMLDivElement>(null);
 
 
-    const handleClick = () => {
-        setAddToCar((open) => !open)
-    }
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (containerRef.current && containerRef.current.contains(event.target as Node)) {
+                return;
+            }
+
+            setAddToCar(false);
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    const handleButtonClick = (sizeNumber: string) => {
+        setClickBtn(sizeNumber);
+    };
+
 
     return (
         <SectionFavoritesOfTheWeek>
@@ -24,24 +42,46 @@ export const FavoritesOfTheWeek = () => {
 
 
             <div className="divProducts">
-                <div>
-                    <div className="divImgDiscount" onClick={handleClick}>
-                        <img src={tennis} alt="Imagem de um par de Tênis Clean Urbano - Branco" />
+                <div ref={containerRef}>
+                    <div className="divImgDiscount">
+                        <img
+                            src={tennis} alt="Imagem de um par de Tênis Clean Urbano - Branco"
+                            onClick={() => setAddToCar(!addToCar)} />
                         <h4>36% OFF</h4>
                         <button className="btnHeart"><IoHeartOutline size={22} /></button>
                         {addToCar && (
                             <>
-                                <button className="btnToCar">Adionar à sacola</button>
+                                <button className="btnToCar" >Adionar à sacola</button>
                                 <div>
                                     <div className="divSize">
                                         <div className="sizeAndTypograph">
                                             <h1>Selecione um tamanho</h1>
                                             <div className="spanSize">
-                                                <h6>34</h6>
-                                                <h6>35</h6>
-                                                <h6>36</h6>
-                                                <h6>37</h6>
-                                                <h6>38</h6>
+                                                <button
+                                                    className={`btnSizeNumber ${clickBtn === "34" && "clicked"}`}
+                                                    onClick={() => handleButtonClick("34")}>
+                                                    34
+                                                </button>
+                                                <button
+                                                    className={`btnSizeNumber ${clickBtn === "35" && "clicked"}`}
+                                                    onClick={() => handleButtonClick("35")}>
+                                                    35
+                                                </button>
+                                                <button
+                                                    className={`btnSizeNumber ${clickBtn === "36" && "clicked"}`}
+                                                    onClick={() => handleButtonClick("36")}>
+                                                    36
+                                                </button>
+                                                <button
+                                                    className={`btnSizeNumber ${clickBtn === "37" && "clicked"}`}
+                                                    onClick={() => handleButtonClick("37")}>
+                                                    37
+                                                </button>
+                                                <button
+                                                    className={`btnSizeNumber ${clickBtn === "38" && "clicked"}`}
+                                                    onClick={() => handleButtonClick("38")}>
+                                                    38
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

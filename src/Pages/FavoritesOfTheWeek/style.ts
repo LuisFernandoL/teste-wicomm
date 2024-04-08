@@ -96,8 +96,7 @@ export const SectionFavoritesOfTheWeek = styled.section`
           justify-content: space-around;
           gap: 2rem;
 
-
-          h6 {
+          .btnSizeNumber {
             cursor: pointer;
             width: 2.8rem;
             height: 2.8rem;
@@ -110,6 +109,11 @@ export const SectionFavoritesOfTheWeek = styled.section`
             color: #4f4f4f;
             background-color: #ffffff;
             object-fit: cover;
+          }
+
+          .clicked {
+            background-color: #cf215b;
+            color: #ffffff;
           }
         }
       }
